@@ -28,20 +28,20 @@ class NavigationBar extends React.Component {
     return (
       <div>
         <Navbar className="bg-info shadow" light expand="md">
-          <NavbarBrand href="/" style={{fontFamily: '"Press Start 2P", cursive', fontSize: '1em'}}>
+          <NavbarBrand href="/" style={{fontFamily: '"Press Start 2P", cursive', fontSize: '1em', color: 'white'}}>
               <img style={{height: '40px', marginRight: '.5rem'}} src="/images/d20-folio-logo-1.png" />
               D20Folio</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink><Link to='/'>Home</Link></NavLink>
+                <NavLink><Link className='text-white' to='/'>Home</Link></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink><Link to='/mychars'>My Characters</Link></NavLink>
+                <NavLink><Link className='text-white' to='/mychars'>My Characters</Link></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink><Link to='/new'>New Character</Link></NavLink>
+                <NavLink><Link className='text-white' to='/new'>New Character</Link></NavLink>
               </NavItem>
             </Nav>
           </Collapse>
