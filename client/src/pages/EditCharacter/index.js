@@ -140,7 +140,7 @@ export class EditCharacter extends Component {
                     </Row>
                     <Row>
                         <Col md={12}>
-                            <Button onClick={this.submitCharacterCreation}>
+                            <Button className="mb-3" onClick={this.submitCharacterCreation}>
                                 Create Character
                             </Button>
                         </Col>
