@@ -17,6 +17,27 @@ export class EditCharacter extends Component {
 
     }
 
+    submitCharacterCreation = () => {
+        //create new variable for new state to be housed in
+        const newChar = {
+            name: this.state.name,
+            imageUrl: this.state.imageUrl,
+
+            STR: this.state.STR,
+            DEX: this.state.DEX,
+            INT: this.state.INT,
+            WIS: this.state.WIS,
+            CON: this.state.CON,
+            CHA: this.state.CHA
+        }
+        API.createCharacter(newChar)
+            .then(() => this.clearForm())
+    }
+
+    clearForm = () => {
+        // this.setState( {[field]: ""} )
+    }
+
     //onChange is locked into event function - tracks what we type into input field
     handleInput = field => event => {
         const {value} = event.target;
