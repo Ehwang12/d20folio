@@ -1,9 +1,11 @@
 const router = require('express').Router();
 //this is so we can get express router for routes
+const seeds = require('../charSeeds.json');
 
 router.route('/characters')
     .get((req, res,err) => {
         //get all characters here
+        res.json(seeds);
     })
 
 router.route('/character')
@@ -26,7 +28,7 @@ router.route('/characters/:id')
         res.json("");
     })
 
-router.route('/character/mine')
+router.route('/characters/mine')
     .get((req, res,err) => {
         //get all characters here
         res.json(seeds);

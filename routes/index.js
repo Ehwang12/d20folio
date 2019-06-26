@@ -3,6 +3,6 @@ const router = require('express').Router();
 
 //where we'll set up highest level of files
 router.use('/util', require('./utilRoutes'));
-router.use('/util', require('./apiRoutes'));
+router.use('/api', require('./apiRoutes'));
 
 module.exports = router;

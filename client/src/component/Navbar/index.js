@@ -27,7 +27,7 @@ class NavigationBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light shadow" light expand="md">
+        <Navbar className="bg-info shadow" light expand="md">
           <NavbarBrand href="/" style={{fontFamily: '"Press Start 2P", cursive', fontSize: '1em'}}>
               <img style={{height: '40px', marginRight: '.5rem'}} src="/images/d20-folio-logo-1.png" />
               D20Folio</NavbarBrand>
@@ -49,6 +49,7 @@ class NavigationBar extends React.Component {
       </div>
     );
   }
+
 }
 
 export default NavigationBar;
